@@ -1,0 +1,35 @@
+{
+  "name": "fundfusion",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/",
+    "serve": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "apexcharts": "^4.1.0",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.6",
+    "packages": "^0.0.8",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vue3-apexcharts": "^1.8.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.5.12",
+    "@vue/eslint-config-prettier": "^10.0.0",
+    "eslint": "^9.12.0",
+    "eslint-plugin-vue": "^9.29.0",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.8"
+  }
+}

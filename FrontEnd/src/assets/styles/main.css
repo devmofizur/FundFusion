@@ -1,0 +1,217 @@
+.main-content {
+  width: 100%;
+  position: relative;
+  z-index: -1; /* Ensure it layers above the background */
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.campaign-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/*Navigation Code*/
+
+header {
+  background-color: #4a90e2; /* Softer blue background for a friendly feel */
+  padding: 15px 30px; /* Add some padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 15px 15px 0 0; /* Rounded corners for the top left and right corners */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Center the navigation items */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none; /* Remove bullet points */
+  gap: 25px; /* Space between items */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-list li {
+  position: relative; /* Position relative for the hover effect */
+}
+
+.nav-list a {
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* White text color */
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: 600; /* Semi-bold font */
+  padding: 12px 20px; /* Padding around links */
+  border-radius: 25px; /* More rounded corners for links */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for links */
+}
+
+.nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly darker background on hover */
+  color: #ffffff; /* Keep the text white */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .nav-list {
+    flex-direction: row; /* Keep items in a row for tablets */
+    justify-content: center; /* Center items */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align the items */
+    padding: 10px 0; /* Add vertical padding for better spacing */
+  }
+}
+
+/*View Button*/
+.view-toggle {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-icon {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.view-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.1s;
+}
+
+.view-icon:hover img {
+  transform: scale(1.1);
+}
+
+/*Campain Code*/
+
+.campaign-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  background: transparent; /* Soft gradient background for the container */
+}
+
+.campaign-card {
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* 3D shadow effect */
+  padding: 30px;
+  width: calc(100% / 4 - 40px); /* 4 cards per row */
+  max-width: 300px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* When in list view */
+.campaign-container.list-view .campaign-card {
+  width: 100%; /* Full width in list view */
+  max-width: calc(100% - 40px); /* Remove max-width in list view */
+}
+
+.campaign-card:hover {
+  transform: translateY(-3px);
+}
+
+.campaign-card h3 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: 'Sergio UI', sans-serif;
+  text-align: center;
+}
+
+.campaign-card .campaign-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.campaign-card .campaign-stats span {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background: rgba(175, 175, 175, 0.6);
+  color: #ffffff;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.8); /* 3D inner shadow */
+}
+
+/* Responsive changes for smaller screens */
+@media (max-width: 1200px) {
+  .campaign-card {
+    width: calc(100% / 3 - 40px); /* 3 cards per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .campaign-card {
+    width: calc(100% / 2 - 40px); /* 2 cards per row for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .campaign-card {
+    width: 100%; /* Full width for very small screens */
+  }
+}
+
+
+
+/*Footer Code*/
+
+.app-footer {
+  background-color: #09090f88; /* Matching background color with AppHeader */
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  padding: 15px 30px; /* Consistent padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 0 0 15px 15px ; /* Rounded corners at the bottom left and right */
+  position: relative; /* Relative positioning for layout */
+}
+
+.sticky-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Space between footer content and copyright */
+}
+
+.privacy-policy-link {
+  color: #ffffff; /* White text for contrast */
+  text-decoration: none; /* Remove underline */
+  margin-right: 15px; /* Space between link and page view count */
+}
+
+.privacy-policy-link:hover {
+  text-decoration: underline; /* Underline on hover for better visibility */
+}
+
